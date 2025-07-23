@@ -1,0 +1,16 @@
+name: MellurbooEasyVanish
+version: '1.0'
+main: org.mellurboo.mellurboosVanish.MellurboosVanish
+api-version: '1.21'
+load: STARTUP
+authors: [ Mellurboo ]
+commands:
+  vanish:
+      description: Vanish any player for any reason, quickly and quietly.
+      usage: /vanish [<player>|reload]
+
+permissions:
+    easyvanish:
+      default: false
+    easyvanish.seeVanished:
+      default: false

@@ -1,0 +1,13 @@
+#
+# Myles "Mellurboo" Wilson 2025
+#
+
+strings:
+  youHaveVanished: "You have entered Vanish and have been removed from the Tab Menu. A disconnect message has been dispatched"
+  youHaveUnVanished: "You have left Vanish players can now see you and you've been readded to the tab menu"
+  # you can use %player% here, it will be replaced for you
+  worldQuitMessage: "§e%player% left the game"
+
+settings:
+  glowForAdmins: true
+  allowChatWhileVanished: false
