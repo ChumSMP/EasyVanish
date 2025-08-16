@@ -7,7 +7,8 @@ public class strings {
     public String
         youHaveVanished,
         youHaveUnVanished,
-        worldQuitMessage;
+        worldQuitMessage,
+        worldJoinMessage;
 
     public boolean AssignStrings(FileConfiguration config) {
         Bukkit.getLogger().info("[Mellurboo's Vanish] Plugin applying strings");
@@ -15,6 +16,7 @@ public class strings {
             youHaveVanished     = config.getString("strings.youHaveVanished");
             youHaveUnVanished   = config.getString("strings.youHaveUnVanished");
             worldQuitMessage    = config.getString("strings.worldQuitMessage");
+            worldJoinMessage    = config.getString("strings.worldJoinMessage");
             return true;
         }catch (Exception e){
             e.printStackTrace();

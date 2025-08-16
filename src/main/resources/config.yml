@@ -7,6 +7,7 @@ strings:
   youHaveUnVanished: "You have left Vanish players can now see you and you've been readded to the tab menu"
   # you can use %player% here, it will be replaced for you
   worldQuitMessage: "§e%player% left the game"
+  worldJoinMessage: "§e%player% joined the game"
 
 settings:
   glowForAdmins: true

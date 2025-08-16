@@ -1,5 +1,6 @@
 package org.mellurboo.mellurboosVanish.commands;
 
+import github.scarsz.discordsrv.DiscordSRV;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -7,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.mellurboo.mellurboosVanish.MellurboosVanish;
+import github.scarsz.discordsrv.api.*;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -56,8 +58,17 @@ public class vanish implements CommandExecutor {
         if (!vanishManager.isVanished(player)) {
             /// to make it more believable we send a quit message
             Bukkit.broadcastMessage(plugin.getStrings().worldQuitMessage.replace("%player%", player.getName()));
+
+            if (plugin.pluginHook.usingSupportedPlugin("DiscordSRV")) {
+                DiscordSRV.getPlugin().sendLeaveMessage(player, plugin.getStrings().worldQuitMessage);
+            }
             vanishManager.vanishPlayer(player);
         }else {
+            Bukkit.broadcastMessage(plugin.getStrings().worldJoinMessage.replace("%player%", player.getName()));
+
+            if (plugin.pluginHook.usingSupportedPlugin("DiscordSRV")) {
+                DiscordSRV.getPlugin().sendJoinMessage(player, plugin.getStrings().worldJoinMessage);
+            }
             vanishManager.unvanishPlayer(player);
         }
     }

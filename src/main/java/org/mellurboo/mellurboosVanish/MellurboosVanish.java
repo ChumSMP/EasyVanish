@@ -12,6 +12,7 @@ import org.mellurboo.mellurboosVanish.commands.*;
 
 public final class MellurboosVanish extends JavaPlugin {
     private vanishManager vanishManager;
+    public pluginHook pluginHook;
     public strings Strings;
     public settings Settings;
 

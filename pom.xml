@@ -6,7 +6,7 @@
 
     <groupId>org.mellurboo</groupId>
     <artifactId>MellurboosVanish</artifactId>
-    <version>1.0</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <name>MellurboosVanish</name>
@@ -65,6 +65,16 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <!-- discordsrv -->
+        <repository>
+            <id>scarsz-repo</id>
+            <url>https://nexus.scarsz.me/content/repositories/releases/</url>
+        </repository>
+        <!-- bukkit -->
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -72,6 +82,12 @@
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>1.21.8-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.discordsrv</groupId>
+            <artifactId>discordsrv</artifactId>
+            <version>1.29.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
