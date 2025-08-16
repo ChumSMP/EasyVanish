@@ -11,6 +11,7 @@ import org.mellurboo.mellurboosVanish.resources.strings;
 import org.mellurboo.mellurboosVanish.commands.*;
 
 public final class MellurboosVanish extends JavaPlugin {
+    /// I need to make these all private and then accessed through a func, not today tho
     private vanishManager vanishManager;
     public pluginHook pluginHook;
     public strings Strings;
@@ -22,6 +23,7 @@ public final class MellurboosVanish extends JavaPlugin {
         loadConfig();
 
         vanishManager = new vanishManager(this);
+        pluginHook = new pluginHook();
 
         registerCommands();
         registerEvents();
